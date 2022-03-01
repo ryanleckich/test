@@ -8,7 +8,7 @@ class Ship:
         # Initialize the ship and at its starting postion
         self.screen = ai_game.screen
         self.settings = ai_game.settings
-        self.screeen_rect = ai_game.screen.get_rect()
+        self.screen_rect = ai_game.screen.get_rect()
 
         # load ths ship image and get its rect
         self.image = pygame.image.load("/Users/ryanleckich/Downloads/ship.bmp")
@@ -32,6 +32,6 @@ class Ship:
         # update rect object from self.x
         self.rect.x = self.x
 
-    def bltime(self):
+    def blitme(self):
         "Draw ship at its current location"
         self.screen.blit(self.image, self.rect)
