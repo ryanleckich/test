@@ -8,6 +8,7 @@ from ship import Ship
 
 from bullet import Bullet
 from alien import Alien
+from button import Button
 
 
 class AlienInvasion:
@@ -120,6 +121,11 @@ class AlienInvasion:
         self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()
+
+        self.aliens.draw(self.screen)
+
+        if not self.state.game_active:
+            self.play_button.draw_button()
 
         pygame.display.flip()
 
